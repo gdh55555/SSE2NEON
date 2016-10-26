@@ -206,6 +206,12 @@ INLINE __m128i _mm_xor_si128(__m128i a, __m128i b)
 	return veorq_s32(a, b);
 }
 
+// Computes the bitwise OR of the four single-precision, floating-point values of a and b.
+INLINE __m128 _mm_or_ps(__m128 a, __m128 b)
+{
+     return (__m128)vorrq_s32((__m128i)a, (__m128i)b);
+}
+
 /* Computes the bitwise AND of the 128-bit value in b and the bitwise NOT of the 128-bit value in a. 
  * r := (~a) & b
  * */
@@ -221,6 +227,12 @@ INLINE __m128i _mm_andnot_si128(__m128i a, __m128i b)
 INLINE __m128i _mm_and_si128(__m128i a, __m128i b)
 {
 	return vandq_s32(a, b);
+}
+
+// Computes the bitwise AND-NOT of the four single-precision, floating-point values of a and b.
+INLINE __m128 _mm_andnot_ps(__m128 a, __m128 b)
+{
+    return (__m128)vbicq_s32((__m128i)b, (__m128i)a); // *NOTE* argument swap
 }
 
 /* Computes the bitwise AND of the four single-precision, floating-point values of a and b.
@@ -276,6 +288,12 @@ INLINE __m128 _mm_cmpgt_ps(__m128 a, __m128 b)
 INLINE __m128 _mm_cmple_ps(__m128 a, __m128 b)
 {
 	return (__m128)vcleq_f32(a, b);
+}
+
+// Compares for inequality. 
+INLINE __m128 _mm_cmpneq_ps(__m128 a, __m128 b)
+{
+     return (__m128)vmvnq_s32((__m128i)vceqq_f32(a, b));
 }
 /***************************************************************************
  *                load and store
@@ -333,6 +351,13 @@ INLINE void _mm_store_ss(float *p, __m128 a)
 	/* Stores the lower single-precision, floating-point value. */
 	vst1q_lane_f32(p, a, 0);
 }
+
+// Loads four single-precision, floating-point values. 
+INLINE __m128 _mm_load1_ps(const float * p)
+{
+    return vld1q_dup_f32(p);
+}
+
 /***************************************************************************
  *                SET 
  ***************************************************************************/
@@ -368,6 +393,12 @@ INLINE __m128i _mm_set1_epi16 (short w)
 	return (__m128i)vdupq_n_s16((int16_t)w);
 }
 
+// Sets the 4 signed 32-bit integer values to i.
+INLINE __m128i _mm_set1_epi32(int _i)
+{
+    return (__m128i)vdupq_n_s32(_i);
+}
+
 /* Sets the four single-precision, floating-point values to w
  * r0 := r1 := r2 := r3 := w 
  * */
@@ -377,10 +408,21 @@ INLINE __m128 _mm_set1_ps(float w)
 }
 #define _mm_set_ps1 _mm_set1_ps
 
+//do not test
+/*
+INLINE __m128 _mm_set_ps(float w, float z, float y, float x)
+{
+     float __attribute__((aligned(16))) data[4] = { x, y, z, w };
+     return vld1q_f32(data);
+}
+*/
+
 //todo ~~~~~~~~~~~~~~~~~~~~~~~~~
 /* Snhuffles the 4 signed or unsigned 32-bit integers in a as specified by imm. */
+
 INLINE __m128i _mm_shuffle_epi32 (__m128i a, int imm)
 {
+/*
 	switch (imm)
 	{
 		case 0 : 
@@ -389,18 +431,21 @@ INLINE __m128i _mm_shuffle_epi32 (__m128i a, int imm)
 		default: 
 
 			__m128i ret;
-			ret[0] = a[imm & 0x3];
-			ret[1] = a[(imm >> 2) & 0x3];
-			ret[2] = a[(imm >> 4) & 0x03];
-			ret[3] = a[(imm >> 6) & 0x03];
+			vsetq_lane_s32((vgetq_lane_s32(a, (imm & 0x3)), ret, 0);
+			vsetq_lane_s32((vgetq_lane_s32(a, (imm >> 2) & 0x3)), ret, 1);
+			vsetq_lane_s32((vgetq_lane_s32(a, (imm >> 4) & 0x3)), ret, 2);
+			vsetq_lane_s32((vgetq_lane_s32(a, (imm >> 6) & 0x3)), ret,  3);
 			return ret;
 	}
+*/
 }
 
 //todo ~~~~~~~~~~~~~~~~~~~~~~~~~
 /* Selects four specific single-precision, floating-point values from a and b, based on the mask i. */
+
 INLINE __m128 _mm_shuffle_ps(__m128 a , __m128 b , int i )
 {
+/*
 	switch (i)
 	{
 //		case 0 : 
@@ -408,13 +453,15 @@ INLINE __m128 _mm_shuffle_ps(__m128 a , __m128 b , int i )
 //			break;
 		default: 
 			__m128 ret;                  
-			ret[0] = a[i & 0x3];         
-			ret[1] = a[(i >> 2) & 0x3];  
-			ret[2] = b[(i >> 4) & 0x03]; 
-			ret[3] = b[(i >> 6) & 0x03]; 
+			vsetq_lane_f32((vgetq_lane_f32(a, i & 0x3)), ret,  0);
+			vsetq_lane_f32((vgetq_lane_f32(b, (i >> 2) & 0x3)), ret, 1);
+			vsetq_lane_f32((vgetq_lane_f32(b, (i >> 4) & 0x3)), ret, 2);
+			vsetq_lane_f32((vgetq_lane_f32(b, (i >> 6) & 0x3)), ret, 3);
 			return ret;
 	}
+*/
 }
+
 /***************************************************************************
  *                GET 
  ***************************************************************************/
@@ -572,6 +619,12 @@ INLINE __m128i _mm_srai_epi32 (__m128i a, int count)
 //	todo :
 //	if immediate
 	return vshlq_s32(a, vdupq_n_s32(-count));
+}
+
+INLINE __m128i _mm_srai_epi16 (__m128i a, int count)
+{
+	int16x8_t b = vmovq_n_s16(-count);
+    return (__m128i)vshlq_s16((int16x8_t)a,b);
 }
 
 #endif

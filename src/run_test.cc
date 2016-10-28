@@ -32,6 +32,7 @@
 #ifdef ARM
 #define DESKTOP 0
 #include "sse2neon.h"
+//#include "/home/gudh/sse2neon/SSE2NEON.h"
 #define INPUT "/data/input"
 #else
 #define DESKTOP 1
@@ -594,6 +595,8 @@ TEST(STORE, _mm_store_ss, FLOAT)
 
 TEST(SET, _mm_set1_epi8, INTEGER)
 TEST(BINARY, _mm_xor_si128, INTEGER)
+//gudh
+TEST(BINARY, _mm_or_si128, INTEGER)
 TEST(BINARY, _mm_cmpgt_epi8, INTEGER)
 TEST(BINARY, _mm_and_si128, INTEGER)
 TEST(BINARY, _mm_andnot_si128, INTEGER)
@@ -602,13 +605,19 @@ TEST(SET, _mm_set1_epi16, INTEGER)
 //gudh
 TEST(SET, _mm_set1_epi32, INTEGER)
 TEST(BINARY, _mm_cmpgt_epi16, INTEGER)
+TEST(BINARY, _mm_cmplt_epi32, INTEGER)
+TEST(BINARY, _mm_cmpgt_epi32, INTEGER)
 TEST(SET, _mm_set1_ps, FLOAT)
 TEST(BINARY, _mm_cmpgt_ps, FLOAT)
 //gudh
 TEST(BINARY, _mm_cmpneq_ps, FLOAT)
+TEST(BINARY, _mm_cmpord_ps, FLOAT)
+TEST(BINARY, _mm_cmpge_ps, FLOAT)
+TEST(BINARY, _mm_cmplt_ps , FLOAT)
 TEST(BINARY, _mm_and_ps, FLOAT)
 //gudh
 TEST(BINARY, _mm_or_ps, FLOAT)
+TEST(BINARY, _mm_xor_ps, FLOAT)
 
 TEST(BINARY, _mm_andnot_ps, FLOAT)
 TEST(BINARY, _mm_cmple_ps, FLOAT)
@@ -629,10 +638,14 @@ TEST(SHIFT_EPI32, _mm_srai_epi16, INTEGER)
 
 TEST(SHUFFLE_PS, _mm_shuffle_ps, FLOAT)
 TEST(UNARY, _mm_cvtepi32_ps, INT2FLOAT)
+TEST(UNARY, _mm_cvttps_epi32, FLOAT2INT)
+//gudh
+TEST(UNARY, _mm_rcp_ps, FLOAT)
+TEST(UNARY, _mm_sqrt_ps, FLOAT)
 
 TEST(BINARY, _mm_mul_ps, FLOAT)
 TEST(BINARY, _mm_add_ps, FLOAT)
-TEST(UNARY, _mm_cvtps_epi32, FLOAT2INT)
+//TEST(UNARY, _mm_cvtps_epi32, FLOAT2INT)
 TEST(BINARY, _mm_packus_epi16, INTEGER)
 TEST(BINARY, _mm_sub_ps, FLOAT)
 TEST(BINARY, _mm_sub_epi32, INTEGER)
@@ -653,11 +666,12 @@ int main()
 //	LOAD_RUN(_mm_loadl_epi64, t11);
 //	STORE_RUN(_mm_storel_epi64, t12);
 //	LOAD_RUN(_mm_load_ss, t13);
-	LOAD_RUN(_mm_load1_ps, t13);
+//	LOAD_RUN(_mm_load1_ps, t13);
 //	STORE_RUN(_mm_store_ss, t14);
 //
 //	SET_RUN(_mm_set1_epi8, t15);
 //	BINARY_RUN(_mm_xor_si128, t16);
+//	BINARY_RUN(_mm_or_si128, t16);
 //	BINARY_RUN(_mm_cmpgt_epi8, t17);
 //	BINARY_RUN(_mm_and_si128, t18);
 //	BINARY_RUN(_mm_andnot_si128, t19);
@@ -665,13 +679,19 @@ int main()
 //	SET_RUN(_mm_set1_epi16, t21);
 //	SET_RUN(_mm_set1_epi32, t21);
 //	BINARY_RUN(_mm_cmpgt_epi16, t22);
+//	BINARY_RUN(_mm_cmplt_epi32, t22);
+//	BINARY_RUN(_mm_cmpgt_epi32, t23);
 //
 //	SET_RUN(_mm_set1_ps, t23);
 //	BINARY_RUN(_mm_cmpgt_ps, t24);
+//	BINARY_RUN(_mm_cmpord_ps, t24);
 //	BINARY_RUN(_mm_cmpneq_ps, t24);
+//	BINARY_RUN(_mm_cmplt_ps, t24);
+//	BINARY_RUN(_mm_cmpge_ps, t25);
 //	BINARY_RUN(_mm_and_ps, t25);
 //	BINARY_RUN(_mm_andnot_ps, t25);
-	BINARY_RUN(_mm_or_ps, t25);
+//	BINARY_RUN(_mm_or_ps, t25);
+//	BINARY_RUN(_mm_xor_ps, t26);
 //	BINARY_RUN(_mm_cmple_ps, t26);
 //
 //	NULLARY_RUN(_mm_setzero_si128, t27);
@@ -685,8 +705,11 @@ int main()
 //	BINARY_RUN(_mm_add_epi32, t35);
 //	SHIFT_EPI32_RUN(_mm_srai_epi32, t36);
 //	SHIFT_EPI32_RUN(_mm_srai_epi16, t36);
-//	SHUFFLE_PS_RUN(_mm_shuffle_ps, t38);
+	SHUFFLE_PS_RUN(_mm_shuffle_ps, t38);
 //	UNARY_RUN(_mm_cvtepi32_ps, t37);
+//	UNARY_RUN(_mm_cvttps_epi32, t37);
+//	UNARY_RUN(_mm_rcp_ps, t37);
+//	UNARY_RUN(_mm_sqrt_ps, t38);
 
 //	BINARY_RUN(_mm_add_ps, t40);
 //	BINARY_RUN(_mm_packus_epi16, t42);
@@ -698,7 +721,8 @@ int main()
 //	BINARY_RUN(_mm_min_ps, t5);
 //	BINARY_RUN(_mm_max_ps, t2);
 //	BINARY_RUN(_mm_mul_ps, t39);
-//	UNARY_RUN(_mm_cvtps_epi32, t41);
+//
+//  UNARY_RUN(_mm_cvtps_epi32, t41);
 	return 0;
 }
 

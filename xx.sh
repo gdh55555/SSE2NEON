@@ -55,8 +55,8 @@ diff $BIN_DIR/results/SSE.log $BIN_DIR/results/NEON.log > /dev/null
 
 if [ $? -ne 0 ]
 then
-	echo  "\033[41;37m ~~~~ERROR!!!~~~~ \033[0m "
+	echo  -e "\033[41;37m ~~~~ERROR!!!~~~~ \033[0m "
 	exit
 else
-	echo  "\033[42;37m ~~~~OK~~~ \033[0m "
+	echo  -e "\033[42;37m ~~~~OK~~~ \033[0m "
 fi

@@ -1,0 +1,1235 @@
+Step.1 compiling ...
+arm-linux-gnueabi-g++  -std=c++11 -Wall -march=armv7-a -mfloat-abi=softfp -mfpu=neon -DARM -I../include -o test_neon run_test.cc
+In file included from run_test.cc:34:0:
+../include/sse2neon.h: In function ‘__m128 _mm_rcp_ps(__m128)’:
+../include/sse2neon.h:206:31: error: ‘recipq_newton’ was not declared in this scope
+In file included from run_test.cc:34:0:
+../include/sse2neon.h: In function ‘__m128 _mm_shuffle_ps(__m128, __m128, int)’:
+../include/sse2neon.h:828:1: warning: no return statement in function returning non-void [-Wreturn-type]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_uint8_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_int8_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_uint16_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_int16_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_uint32_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_int32_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_uint64_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epu8::test__mm_max_epu8_int64_t()’:
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:577:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_uint8_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_int8_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_uint16_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_int16_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_uint32_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_int32_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_uint64_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_epi16::test__mm_max_epi16_int64_t()’:
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:578:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_ps::test__mm_max_ps_float()’:
+run_test.cc:579:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:579:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:579:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_max_ps::test__mm_max_ps_double()’:
+run_test.cc:579:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:579:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:579:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_uint8_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_int8_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_uint16_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_int16_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_uint32_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_int32_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_uint64_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epu8::test__mm_min_epu8_int64_t()’:
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:580:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_uint8_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_int8_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_uint16_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_int16_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_uint32_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_int32_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_uint64_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_epi16::test__mm_min_epi16_int64_t()’:
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:581:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_ps::test__mm_min_ps_float()’:
+run_test.cc:582:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:582:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:582:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_min_ps::test__mm_min_ps_double()’:
+run_test.cc:582:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:582:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:582:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_uint8_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_int8_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_uint16_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_int16_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_uint32_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_int32_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_uint64_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi16::test__mm_add_epi16_int64_t()’:
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:583:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_uint8_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_int8_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_uint16_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_int16_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_uint32_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_int32_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_uint64_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi16::test__mm_sub_epi16_int64_t()’:
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:584:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_uint8_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_int8_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_uint16_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_int16_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_uint32_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_int32_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_uint64_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_adds_epu16::test__mm_adds_epu16_int64_t()’:
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:585:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_uint8_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_int8_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_uint16_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_int16_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_uint32_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_int32_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_uint64_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_cvtsi32_si128::test__mm_cvtsi32_si128_int64_t()’:
+run_test.cc:587:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_uint8_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_int8_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_uint16_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_int16_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_uint32_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_int32_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_uint64_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void GETTest_mm_cvtsi128_si32::test__mm_cvtsi128_si32_int64_t()’:
+run_test.cc:588:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_uint8_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_int8_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_uint16_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_int16_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_uint32_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_int32_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_uint64_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_loadl_epi64::test__mm_loadl_epi64_int64_t()’:
+run_test.cc:589:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_uint8_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_int8_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_uint16_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_int16_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_uint32_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_int32_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_uint64_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_storel_epi64::test__mm_storel_epi64_int64_t()’:
+run_test.cc:590:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_load_ss::test__mm_load_ss_float()’:
+run_test.cc:591:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_load_ss::test__mm_load_ss_double()’:
+run_test.cc:591:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_load1_ps::test__mm_load1_ps_float()’:
+run_test.cc:593:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void LOADTest_mm_load1_ps::test__mm_load1_ps_double()’:
+run_test.cc:593:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_store_ss::test__mm_store_ss_float()’:
+run_test.cc:594:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void STORETest_mm_store_ss::test__mm_store_ss_double()’:
+run_test.cc:594:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_uint8_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_int8_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_uint16_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_int16_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_uint32_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_int32_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_uint64_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi8::test__mm_set1_epi8_int64_t()’:
+run_test.cc:596:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_uint8_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_int8_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_uint16_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_int16_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_uint32_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_int32_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_uint64_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_si128::test__mm_xor_si128_int64_t()’:
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:597:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_uint8_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_int8_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_uint16_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_int16_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_uint32_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_int32_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_uint64_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_si128::test__mm_or_si128_int64_t()’:
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:599:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_uint8_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_int8_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_uint16_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_int16_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_uint32_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_int32_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_uint64_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi8::test__mm_cmpgt_epi8_int64_t()’:
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:600:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_uint8_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_int8_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_uint16_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_int16_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_uint32_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_int32_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_uint64_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_si128::test__mm_and_si128_int64_t()’:
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:601:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_uint8_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_int8_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_uint16_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_int16_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_uint32_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_int32_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_uint64_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_si128::test__mm_andnot_si128_int64_t()’:
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:602:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_uint8_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_int8_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_uint16_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_int16_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_uint32_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_int32_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_uint64_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_subs_epu8::test__mm_subs_epu8_int64_t()’:
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:603:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_uint8_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_int8_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_uint16_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_int16_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_uint32_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_int32_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_uint64_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi16::test__mm_set1_epi16_int64_t()’:
+run_test.cc:604:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_uint8_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_int8_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_uint16_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_int16_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_uint32_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_int32_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_uint64_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_epi32::test__mm_set1_epi32_int64_t()’:
+run_test.cc:606:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_uint8_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_int8_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_uint16_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_int16_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_uint32_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_int32_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_uint64_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi16::test__mm_cmpgt_epi16_int64_t()’:
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:607:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_uint8_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_int8_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_uint16_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_int16_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_uint32_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_int32_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_uint64_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_epi32::test__mm_cmplt_epi32_int64_t()’:
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:608:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_uint8_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_int8_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_uint16_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_int16_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_uint32_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_int32_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_uint64_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_epi32::test__mm_cmpgt_epi32_int64_t()’:
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:609:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_ps::test__mm_set1_ps_float()’:
+run_test.cc:610:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SETTest_mm_set1_ps::test__mm_set1_ps_double()’:
+run_test.cc:610:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_ps::test__mm_cmpgt_ps_float()’:
+run_test.cc:611:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:611:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:611:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpgt_ps::test__mm_cmpgt_ps_double()’:
+run_test.cc:611:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:611:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:611:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpneq_ps::test__mm_cmpneq_ps_float()’:
+run_test.cc:613:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:613:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:613:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpneq_ps::test__mm_cmpneq_ps_double()’:
+run_test.cc:613:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:613:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:613:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpord_ps::test__mm_cmpord_ps_float()’:
+run_test.cc:614:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:614:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:614:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpord_ps::test__mm_cmpord_ps_double()’:
+run_test.cc:614:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:614:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:614:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpge_ps::test__mm_cmpge_ps_float()’:
+run_test.cc:615:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:615:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:615:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmpge_ps::test__mm_cmpge_ps_double()’:
+run_test.cc:615:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:615:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:615:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_ps::test__mm_cmplt_ps_float()’:
+run_test.cc:616:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:616:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:616:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmplt_ps::test__mm_cmplt_ps_double()’:
+run_test.cc:616:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:616:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:616:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_ps::test__mm_and_ps_float()’:
+run_test.cc:617:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:617:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:617:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_and_ps::test__mm_and_ps_double()’:
+run_test.cc:617:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:617:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:617:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_ps::test__mm_or_ps_float()’:
+run_test.cc:619:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:619:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:619:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_or_ps::test__mm_or_ps_double()’:
+run_test.cc:619:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:619:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:619:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_ps::test__mm_xor_ps_float()’:
+run_test.cc:620:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:620:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:620:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_xor_ps::test__mm_xor_ps_double()’:
+run_test.cc:620:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:620:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:620:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_ps::test__mm_andnot_ps_float()’:
+run_test.cc:622:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:622:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:622:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_andnot_ps::test__mm_andnot_ps_double()’:
+run_test.cc:622:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:622:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:622:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmple_ps::test__mm_cmple_ps_float()’:
+run_test.cc:623:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:623:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:623:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_cmple_ps::test__mm_cmple_ps_double()’:
+run_test.cc:623:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:623:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:623:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_uint8_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_int8_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_uint16_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_int16_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_uint32_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_int32_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_uint64_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_si128::test__mm_setzero_si128_int64_t()’:
+run_test.cc:625:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_uint8_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_int8_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_uint16_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_int16_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_uint32_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_int32_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_uint64_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_EPITest_mm_shuffle_epi32::test__mm_shuffle_epi32_int64_t()’:
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:626:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_uint8_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_int8_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_uint16_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_int16_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_uint32_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_int32_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_uint64_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packs_epi32::test__mm_packs_epi32_int64_t()’:
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:627:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_uint8_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_int8_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_uint16_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_int16_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_uint32_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_int32_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_uint64_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi8::test__mm_unpackhi_epi8_int64_t()’:
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:628:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_uint8_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_int8_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_uint16_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_int16_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_uint32_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_int32_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_uint64_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi8::test__mm_unpacklo_epi8_int64_t()’:
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:629:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_uint8_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_int8_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_uint16_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_int16_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_uint32_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_int32_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_uint64_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mulhi_epi16::test__mm_mulhi_epi16_int64_t()’:
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:630:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_uint8_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_int8_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_uint16_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_int16_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_uint32_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_int32_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_uint64_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mullo_epi16::test__mm_mullo_epi16_int64_t()’:
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:631:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_uint8_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_int8_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_uint16_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_int16_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_uint32_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_int32_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_uint64_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpacklo_epi16::test__mm_unpacklo_epi16_int64_t()’:
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:632:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_uint8_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_int8_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_uint16_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_int16_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_uint32_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_int32_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_uint64_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_epi32::test__mm_add_epi32_int64_t()’:
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:633:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_uint8_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_int8_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_uint16_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_int16_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_uint32_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_int32_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_uint64_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_unpackhi_epi16::test__mm_unpackhi_epi16_int64_t()’:
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:634:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_uint8_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_int8_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_uint16_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_int16_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_uint32_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_int32_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_uint64_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi32::test__mm_srai_epi32_int64_t()’:
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:635:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_uint8_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_int8_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_uint16_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_int16_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_uint32_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_int32_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_uint64_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHIFT_EPI32Test_mm_srai_epi16::test__mm_srai_epi16_int64_t()’:
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:637:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_PSTest_mm_shuffle_ps::test__mm_shuffle_ps_float()’:
+run_test.cc:639:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:639:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:639:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void SHUFFLE_PSTest_mm_shuffle_ps::test__mm_shuffle_ps_double()’:
+run_test.cc:639:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:639:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:639:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_uint8_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_int8_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_uint16_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_int16_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_uint32_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_int32_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_uint64_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvtepi32_ps::test__mm_cvtepi32_ps_int64_t()’:
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:640:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvttps_epi32::test__mm_cvttps_epi32_float()’:
+run_test.cc:641:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:641:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_cvttps_epi32::test__mm_cvttps_epi32_double()’:
+run_test.cc:641:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:641:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_rcp_ps::test__mm_rcp_ps_float()’:
+run_test.cc:643:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:643:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_rcp_ps::test__mm_rcp_ps_double()’:
+run_test.cc:643:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:643:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_sqrt_ps::test__mm_sqrt_ps_float()’:
+run_test.cc:644:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:644:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void UNARYTest_mm_sqrt_ps::test__mm_sqrt_ps_double()’:
+run_test.cc:644:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:644:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mul_ps::test__mm_mul_ps_float()’:
+run_test.cc:646:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:646:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:646:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_mul_ps::test__mm_mul_ps_double()’:
+run_test.cc:646:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:646:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:646:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_ps::test__mm_add_ps_float()’:
+run_test.cc:647:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:647:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:647:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_add_ps::test__mm_add_ps_double()’:
+run_test.cc:647:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:647:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:647:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_uint8_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_int8_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_uint16_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_int16_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_uint32_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_int32_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_uint64_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_packus_epi16::test__mm_packus_epi16_int64_t()’:
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:649:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_ps::test__mm_sub_ps_float()’:
+run_test.cc:650:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:650:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:650:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_ps::test__mm_sub_ps_double()’:
+run_test.cc:650:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:650:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:650:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_uint8_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_int8_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_uint16_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_int16_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_uint32_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_int32_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_uint64_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void BINARYTest_mm_sub_epi32::test__mm_sub_epi32_int64_t()’:
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc:651:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_ps::test__mm_setzero_ps_float()’:
+run_test.cc:652:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+run_test.cc: In member function ‘void NULLARYTest_mm_setzero_ps::test__mm_setzero_ps_double()’:
+run_test.cc:652:1: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+In file included from run_test.cc:34:0:
+../include/sse2neon.h: In function ‘__m128 _mm_rcp_ps(__m128)’:
+../include/sse2neon.h:207:1: warning: control reaches end of non-void function [-Wreturn-type]
+make: *** [test_neon] Error 1
+compile error

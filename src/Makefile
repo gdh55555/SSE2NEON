@@ -1,10 +1,11 @@
 PWD := $(shell pwd)
 
 CXX := g++
-ARM_CXX := armv7a-mediatek451_001_vfp-linux-gnueabi-g++ 
+#ARM_CXX := armv7a-mediatek451_001_vfp-linux-gnueabi-g++ 
+ARM_CXX := arm-linux-gnueabi-g++ 
 
 CXXFLAGS := -std=c++11 -msse3 -Wall -I../include
-ARM_CXXFLAGS := -std=c++0x -Wall -march=armv7-a -mfloat-abi=softfp -mfpu=neon -DARM -I../include
+ARM_CXXFLAGS := -std=c++11 -Wall -march=armv7-a -mfloat-abi=softfp -mfpu=neon -DARM -I../include
 
 .PHONY : all
 all: test_sse test_neon gen_input

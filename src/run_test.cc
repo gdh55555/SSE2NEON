@@ -695,7 +695,7 @@ int main()
 //	BINARY_RUN(_mm_cmple_ps, t26);
 //
 //	NULLARY_RUN(_mm_setzero_si128, t27);
-//	SHUFFLE_EPI_RUN(_mm_shuffle_epi32, t28);
+	SHUFFLE_EPI_RUN(_mm_shuffle_epi32, t28);
 //	BINARY_RUN(_mm_packs_epi32, t29);
 //	BINARY_RUN(_mm_unpackhi_epi8, t30);
 //	BINARY_RUN(_mm_unpacklo_epi8, t31);

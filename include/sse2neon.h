@@ -536,70 +536,6 @@ INLINE __m128 _mm_set_ps(float w, float z, float y, float x)
 //todo ~~~~~~~~~~~~~~~~~~~~~~~~~
 /* Snhuffles the 4 signed or unsigned 32-bit integers in a as specified by imm. */
 
-// Takes the upper 64 bits of a and places it in the low end of the result
-// Takes the lower 64 bits of b and places it into the high end of the result.
-INLINE __m128i _mm_shuffle_epi_1032(__m128i a, __m128i b)
-{
-    return vcombine_s32(vget_high_s32(a), vget_low_s32(b));
-}
-
-// takes the lower two 32-bit values from a and swaps them and places in low end of result
-// takes the higher two 32 bit values from b and swaps them and places in high end of result.
-INLINE __m128i _mm_shuffle_epi_2301(__m128i a, __m128i b)
-{
-    return vcombine_s32(vrev64_s32(vget_low_s32(a)), vrev64_s32(vget_high_s32(b)));
-}
-
-// shift a right by 32 bits, and put the lower 32 bits of a into the upper 32 bits of b
-// when a and b are the same, rotates the least significant 32 bits into the most signficant 32 bits, and shifts the rest down
-INLINE __m128i _mm_shuffle_epi_0321(__m128i a, __m128i b)
-{
-    return vextq_s32(a, b, 1);
-}
-
-// shift a left by 32 bits, and put the upper 32 bits of b into the lower 32 bits of a
-// when a and b are the same, rotates the most significant 32 bits into the least signficant 32 bits, and shifts the rest up
-INLINE __m128i _mm_shuffle_epi_2103(__m128i a, __m128i b)
-{
-    return vextq_s32(a, b, 3);
-}
-
-// gets the lower 64 bits of a, and places it in the upper 64 bits
-// gets the lower 64 bits of b and places it in the lower 64 bits
-INLINE __m128i _mm_shuffle_epi_1010(__m128i a, __m128i b)
-{
-    return vcombine_s32(vget_low_s32(a), vget_low_s32(a));
-}
-
-// gets the lower 64 bits of a, and places it in the upper 64 bits
-// gets the lower 64 bits of b, swaps the 0 and 1 elements, and places it in the lower 64 bits
-INLINE __m128i _mm_shuffle_epi_1001(__m128i a, __m128i b)
-{
-    return vcombine_s32(vrev64_s32(vget_low_s32(a)), vget_low_s32(b));
-}
-
-// gets the lower 64 bits of a, swaps the 0 and 1 elements and places it in the upper 64 bits
-// gets the lower 64 bits of b, swaps the 0 and 1 elements, and places it in the lower 64 bits
-INLINE __m128i _mm_shuffle_epi_0101(__m128i a, __m128i b)
-{
-    return vcombine_s32(vrev64_s32(vget_low_s32(a)), vrev64_s32(vget_low_s32(b)));
-}
-
-INLINE __m128i _mm_shuffle_epi_2211(__m128i a, __m128i b)
-{
-    return vcombine_s32(vdup_n_s32(vgetq_lane_s32(a, 1)), vdup_n_s32(vgetq_lane_s32(b, 2)));
-}
-
-INLINE __m128i _mm_shuffle_epi_0122(__m128i a, __m128i b)
-{
-    return vcombine_s32(vdup_n_s32(vgetq_lane_s32(a, 2)), vrev64_s32(vget_low_s32(b)));
-}
-
-INLINE __m128i _mm_shuffle_epi_3332(__m128i a, __m128i b)
-{
-    return vcombine_s32(vget_high_s32(a), vdup_n_s32(vgetq_lane_s32(b, 3)));
-}
-
 template <int i >
 INLINE __m128i _mm_shuffle_epi32_default(__m128i a, __m128i b)
 {
@@ -619,147 +555,11 @@ INLINE __m128i _mm_shuffle_epi32_default(__m128i a, __m128i b)
 #endif
 }
 
-template <int i >
-INLINE __m128i _mm_shuffle_epi32_function(__m128i a, __m128i b)
-{
-    switch (i)
-    {
-        case _MM_SHUFFLE(1, 0, 3, 2): return _mm_shuffle_epi_1032(a, b); break;
-        case _MM_SHUFFLE(2, 3, 0, 1): return _mm_shuffle_epi_2301(a, b); break;
-        case _MM_SHUFFLE(0, 3, 2, 1): return _mm_shuffle_epi_0321(a, b); break;
-        case _MM_SHUFFLE(2, 1, 0, 3): return _mm_shuffle_epi_2103(a, b); break;
-        case _MM_SHUFFLE(1, 0, 1, 0): return _mm_shuffle_epi_1010(a, b); break;
-        case _MM_SHUFFLE(1, 0, 0, 1): return _mm_shuffle_epi_1001(a, b); break;
-        case _MM_SHUFFLE(0, 1, 0, 1): return _mm_shuffle_epi_0101(a, b); break;
-        case _MM_SHUFFLE(2, 2, 1, 1): return _mm_shuffle_epi_2211(a, b); break;
-        case _MM_SHUFFLE(0, 1, 2, 2): return _mm_shuffle_epi_0122(a, b); break;
-        case _MM_SHUFFLE(3, 3, 3, 2): return _mm_shuffle_epi_3332(a, b); break;
-        default: return _mm_shuffle_epi32_default<i>(a, b);
-    }
-}
-
-template <int i >
-INLINE __m128i _mm_shuffle_epi32_splat(__m128i a)
-{
-    return vdupq_n_s32(vgetq_lane_s32(a, i));
-}
-
-template <int i>
-INLINE __m128i _mm_shuffle_epi32_single(__m128i a)
-{
-    switch (i)
-    {
-        case _MM_SHUFFLE(0, 0, 0, 0): return _mm_shuffle_epi32_splat<0>(a); break;
-        case _MM_SHUFFLE(1, 1, 1, 1): return _mm_shuffle_epi32_splat<1>(a); break;
-        case _MM_SHUFFLE(2, 2, 2, 2): return _mm_shuffle_epi32_splat<2>(a); break;
-        case _MM_SHUFFLE(3, 3, 3, 3): return _mm_shuffle_epi32_splat<3>(a); break;
-        default: return _mm_shuffle_epi32_function<i>(a, a);
-    }
-}
-
-#define _mm_shuffle_epi32(a,i) _mm_shuffle_epi32_single<i>(a)
-
-/*
-   INLINE __m128i _mm_shuffle_epi32 (__m128i a, int imm)
-   {
-   switch (imm)
-   {
-   case 0 : 
-   return vdupq_n_s32(vgetq_lane_s32(a, 0)); 
-   break;
-   default: 
-
-   __m128i ret;
-   vsetq_lane_s32((vgetq_lane_s32(a, (imm & 0x3)), ret, 0);
-   vsetq_lane_s32((vgetq_lane_s32(a, (imm >> 2) & 0x3)), ret, 1);
-   vsetq_lane_s32((vgetq_lane_s32(a, (imm >> 4) & 0x3)), ret, 2);
-   vsetq_lane_s32((vgetq_lane_s32(a, (imm >> 6) & 0x3)), ret,  3);
-   return ret;
-   }
-   }
-   */
+//#define _mm_shuffle_epi32(a,i) _mm_shuffle_epi32_single<i>(a)
+#define _mm_shuffle_epi32(a,i) _mm_shuffle_epi32_default<i>(a, a)
 
 //todo ~~~~~~~~~~~~~~~~~~~~~~~~~
 /* Selects four specific single-precision, floating-point values from a and b, based on the mask i. */
-
-
-// NEON does not support a general purpose permute intrinsic
-
-// Takes the upper 64 bits of a and places it in the low end of the result
-// Takes the lower 64 bits of b and places it into the high end of the result.
-INLINE __m128 _mm_shuffle_ps_1032(__m128 a, __m128 b)
-{
-    return vcombine_f32(vget_high_f32(a), vget_low_f32(b));
-}
-
-// takes the lower two 32-bit values from a and swaps them and places in high end of result
-// takes the higher two 32 bit values from b and swaps them and places in low end of result.
-INLINE __m128 _mm_shuffle_ps_2301(__m128 a, __m128 b)
-{
-    return vcombine_f32(vrev64_f32(vget_low_f32(a)), vrev64_f32(vget_high_f32(b)));
-}
-
-// keeps the low 64 bits of b in the low and puts the high 64 bits of a in the high
-INLINE __m128 _mm_shuffle_ps_3210(__m128 a, __m128 b)
-{
-    return vcombine_f32(vget_low_f32(a), vget_high_f32(b));
-}
-
-INLINE __m128 _mm_shuffle_ps_0011(__m128 a, __m128 b)
-{
-    return vcombine_f32(vdup_n_f32(vgetq_lane_f32(a, 1)), vdup_n_f32(vgetq_lane_f32(b, 0)));
-}
-
-INLINE __m128 _mm_shuffle_ps_0022(__m128 a, __m128 b)
-{
-    return vcombine_f32(vdup_n_f32(vgetq_lane_f32(a, 2)), vdup_n_f32(vgetq_lane_f32(b, 0)));
-}
-
-INLINE __m128 _mm_shuffle_ps_2200(__m128 a, __m128 b)
-{
-    return vcombine_f32(vdup_n_f32(vgetq_lane_f32(a, 0)), vdup_n_f32(vgetq_lane_f32(b, 2)));
-}
-
-INLINE __m128 _mm_shuffle_ps_3202(__m128 a, __m128 b)
-{
-    float32_t a0 = vgetq_lane_f32(a, 0);
-    float32_t a2 = vgetq_lane_f32(a, 2);
-    float32x2_t aVal = vdup_n_f32(a2);
-    aVal = vset_lane_f32(a0, aVal, 1);
-    return vcombine_f32(aVal, vget_high_f32(b));
-}
-
-INLINE __m128 _mm_shuffle_ps_1133(__m128 a, __m128 b)
-{
-    return vcombine_f32(vdup_n_f32(vgetq_lane_f32(a, 3)), vdup_n_f32(vgetq_lane_f32(b, 1)));
-}
-
-INLINE __m128 _mm_shuffle_ps_2010(__m128 a, __m128 b)
-{
-    float32_t b0 = vgetq_lane_f32(b, 0);
-    float32_t b2 = vgetq_lane_f32(b, 2);
-    float32x2_t bVal = vdup_n_f32(b0);
-    bVal = vset_lane_f32(b2, bVal, 1);
-    return vcombine_f32(vget_low_f32(a), bVal);
-}
-
-INLINE __m128 _mm_shuffle_ps_2001(__m128 a, __m128 b)
-{
-    float32_t b0 = vgetq_lane_f32(b, 0);
-    float32_t b2 = vgetq_lane_f32(b, 2);
-    float32x2_t bVal = vdup_n_f32(b0);
-    bVal = vset_lane_f32(b2, bVal, 1);
-    return vcombine_f32(vrev64_f32(vget_low_f32(a)), bVal);
-}
-
-INLINE __m128 _mm_shuffle_ps_2032(__m128 a, __m128 b)
-{
-    float32_t b0 = vgetq_lane_f32(b, 0);
-    float32_t b2 = vgetq_lane_f32(b, 2);
-    float32x2_t bVal = vdup_n_f32(b0);
-    bVal = vset_lane_f32(b2, bVal, 1);
-    return vcombine_f32(vget_high_f32(a), bVal);
-}
 
 // NEON does not support a general purpose permute intrinsic
 template <int i>
@@ -767,70 +567,21 @@ INLINE __m128 _mm_shuffle_ps_default(__m128 a, __m128 b)
 {
 #if ENABLE_CPP_VERSION // I am not convinced that the NEON version is faster than the C version yet.
     __m128 ret;
-    ret[0] = a[i & 0x3];
+    huffle_ps_defaultet[0] = a[i & 0x3];
     ret[1] = a[(i >> 2) & 0x3];
     ret[2] = b[(i >> 4) & 0x03];
     ret[3] = b[(i >> 6) & 0x03];
     return ret;
 #else
-    __m128 ret;
-    printf("-------------------------------------\n");
-    vsetq_lane_f32(vgetq_lane_f32(a, (i) & 0x3), ret, 0);
-    vsetq_lane_f32(vgetq_lane_f32(a, (i >> 2) & 0x3), ret, 1);
-    vsetq_lane_f32(vgetq_lane_f32(b, (i >> 4) & 0x3), ret, 2);
-    vsetq_lane_f32(vgetq_lane_f32(b, (i >> 6) & 0x3), ret, 3);
-    printf("%d\n", ret);
+    __m128 ret = vmovq_n_f32(vgetq_lane_f32(a, i&0x3));
+    ret = vsetq_lane_f32(vgetq_lane_f32(a, (i>>2)&0x3), ret, 1);
+    ret = vsetq_lane_f32(vgetq_lane_f32(b, (i>>4)&0x3), ret, 2);
+    ret = vsetq_lane_f32(vgetq_lane_f32(b, (i>>6)&0x3), ret, 3);
     return ret;
 #endif
 }
 
-template <int i >
-INLINE __m128 _mm_shuffle_ps_function(__m128 a, __m128 b)
-{
-    switch (i)
-    {
-       /* case _MM_SHUFFLE(1, 0, 3, 2): return _mm_shuffle_ps_1032(a, b); break;
-        case _MM_SHUFFLE(2, 3, 0, 1): return _mm_shuffle_ps_2301(a, b); break;
-        case _MM_SHUFFLE(3, 2, 1, 0): return _mm_shuffle_ps_3210(a, b); break;
-        case _MM_SHUFFLE(0, 0, 1, 1): return _mm_shuffle_ps_0011(a, b); break;
-        case _MM_SHUFFLE(0, 0, 2, 2): return _mm_shuffle_ps_0022(a, b); break;
-        case _MM_SHUFFLE(2, 2, 0, 0): return _mm_shuffle_ps_2200(a, b); break;
-        case _MM_SHUFFLE(3, 2, 0, 2): return _mm_shuffle_ps_3202(a, b); break;
-        case _MM_SHUFFLE(1, 1, 3, 3): return _mm_shuffle_ps_1133(a, b); break;
-        case _MM_SHUFFLE(2, 0, 1, 0): return _mm_shuffle_ps_2010(a, b); break;
-        case _MM_SHUFFLE(2, 0, 0, 1): return _mm_shuffle_ps_2001(a, b); break;
-        case _MM_SHUFFLE(2, 0, 3, 2): return _mm_shuffle_ps_2032(a, b); break; 
-        */
-        default: _mm_shuffle_ps_default<i>(a, b);
-    }
-}
-
-#define _mm_shuffle_ps(a,b,i) _mm_shuffle_ps_function<i>(a,b)
-
-/*
-INLINE __m128 _mm_shuffle_ps(__m128 a , __m128 b , int i )
-{
-
-   switch (i)
-   {
-//		case 0 : 
-//			return 
-//			break;
-       default: 
-           __m128 ret;                  
-           vsetq_lane_f32((vgetq_lane_f32(a, i & 0x3)), ret,  0);
-           vsetq_lane_f32((vgetq_lane_f32(a, (i >> 2) & 0x3)), ret, 1);
-           vsetq_lane_f32((vgetq_lane_f32(b, (i >> 4) & 0x3)), ret, 2);
-           vsetq_lane_f32((vgetq_lane_f32(b, (i >> 6) & 0x3)), ret, 3);
-           
-           ret[0] = a[i & 0x3];        
-           ret[1] = a[(i >> 2) & 0x3]; 
-           ret[2] = b[(i >> 4) & 0x03];
-           ret[3] = b[(i >> 6) & 0x03];
-           return ret;
-   }
-}
-*/
+#define _mm_shuffle_ps(a,b,i) _mm_shuffle_ps_default<i>(a,b)
 
 /***************************************************************************
  *                GET 

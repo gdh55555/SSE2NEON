@@ -120,9 +120,19 @@ INLINE __m128i _mm_adds_epu16 (__m128i a, __m128i b)
 	return (__m128i)vqaddq_u16((uint16x8_t) a, (uint16x8_t) b);
 }
 
+INLINE __m128i _mm_adds_epi16 (__m128i a, __m128i b)
+{
+	return (__m128i)vqaddq_s16((int16x8_t) a, (int16x8_t) b);
+}
+
 INLINE __m128i _mm_subs_epu16 (__m128i a, __m128i b)
 {
 	return (__m128i)vqsubq_u16((uint16x8_t) a, (uint16x8_t) b);
+}
+
+INLINE __m128i _mm_subs_epi16 (__m128i a, __m128i b)
+{
+	return (__m128i)vqsubq_s16((int16x8_t) a, (int16x8_t) b);
 }
 
 /* Adds the 4 signed or unsigned 32-bit integers in a to the 4 signed or unsigned 32-bit integers in b.
@@ -378,6 +388,12 @@ INLINE __m128 _mm_cmple_ps(__m128 a, __m128 b)
 	return (__m128)vcleq_f32(a, b);
 }
 
+// Compares for equality. 
+INLINE __m128i _mm_cmpeq_epi16(__m128i a, __m128i b)
+{
+     return (__m128i)vceqq_s32(a, b);
+}
+
 // Compares for inequality. 
 INLINE __m128 _mm_cmpneq_ps(__m128 a, __m128 b)
 {
@@ -525,13 +541,23 @@ INLINE __m128 _mm_set1_ps(float w)
 #define _mm_set_ps1 _mm_set1_ps
 
 //do not test
-/*
 INLINE __m128 _mm_set_ps(float w, float z, float y, float x)
 {
      float __attribute__((aligned(16))) data[4] = { x, y, z, w };
      return vld1q_f32(data);
 }
-*/
+
+INLINE __m128i _mm_set_epi16(short w7, short w6, short w5, short w4, short w3, short w2, short w1, short w0)
+{
+     const int16_t __attribute__((aligned(16))) data[8] = {w0, w1, w2, w3, w4, w5, w6, w7};
+     return (__m128i)vld1q_s16(data);
+}
+
+INLINE __m128i _mm_setr_epi16(short w7, short w6, short w5, short w4, short w3, short w2, short w1, short w0)
+{
+     const int16_t __attribute__((aligned(16))) data[8] = {w0, w1, w2, w3, w4, w5, w6, w7};
+     return (__m128i)vld1q_s16(data);
+}
 
 //todo ~~~~~~~~~~~~~~~~~~~~~~~~~
 /* Snhuffles the 4 signed or unsigned 32-bit integers in a as specified by imm. */
@@ -750,5 +776,37 @@ INLINE __m128i _mm_srai_epi16 (__m128i a, int count)
     int16x8_t b = vmovq_n_s16(-count);
     return (__m128i)vshlq_s16((int16x8_t)a,b);
 }
+
+/*
+// Shifts the 8 signed or unsigned 16-bit integers in a right by count bits while shifting in zeros. 
+INLINE __m128i _mm_srl_epi16(__m128i a, __m128i count){
+    int16x8_t b = vqnegq_s16((int16x8_t)count);
+    return (__m128i)vshlq_u16((uint16x8_t)a, b);
+}
+
+INLINE __m128i _mm_sll_epi16(__m128i a, __m128i count){
+    return (__m128i)vshlq_u16((uint16x8_t)a, (int16x8_t)count);
+}
+*/
+
+// Shifts the 4 signed or unsigned 32-bit integers in a left by count bits while shifting in zeros. 
+#define _mm_slli_epi32(a, imm) (__m128i)vshlq_n_s32(a,imm)
+
+
+//Shifts the 4 signed or unsigned 32-bit integers in a right by count bits while shifting in zeros. 
+template <int imm>
+INLINE __m128i _mm_srli_epi32(__m128i a){ 
+    return (__m128i)vshrq_n_u32((uint32x4_t)a, imm);
+}
+#define _mm_srli_epi32( a, imm ) _mm_srli_epi32<imm>(a)
+
+// Shifts the 4 signed 32 - bit integers in a right by count bits while shifting in the sign bit.
+//#define _mm_srai_epi32( a, imm ) vshrq_n_s32(a, imm)
+
+ // Shifts the 128 - bit value in a right by imm bytes while shifting in zeros.imm must be an immediate.
+ #define _mm_srli_si128( a, imm ) (__m128i)vextq_s8((int8x16_t)a, vdupq_n_s8(0), (imm))
+
+// Shifts the 128-bit value in a left by imm bytes while shifting in zeros. imm must be an immediate. 
+#define _mm_slli_si128( a, imm ) (__m128i)vextq_s8(vdupq_n_s8(0), (int8x16_t)a, 16 - (imm))
 
 #endif

@@ -331,7 +331,7 @@ for (size_t i = 0; i < N; i++)													\
 																				\
 			for (int count = 0; count <= 32; count++)							\
 			{																	\
-				t = FUNC (r0,count);											\
+				t = FUNC (r0, count);								        	\
 																				\
 				if (k==0)														\
 					STORE_ ## SD_TYPE(c,t);										\
@@ -342,7 +342,6 @@ for (size_t i = 0; i < N; i++)													\
 			print("\ta        ", a, N);											\
 			print("\tc=OP(a,count)", c, N);										\
 		}																		\
-
 
 #define SHUFFLE_UNARY(FUNC,SD_TYPE,z,y,x,w)			\
 	t = FUNC (r0,_MM_SHUFFLE(z,y,x,w));				\
@@ -633,8 +632,10 @@ TEST(BINARY, _mm_unpacklo_epi16, INTEGER)
 TEST(BINARY, _mm_add_epi32, INTEGER)
 TEST(BINARY, _mm_unpackhi_epi16, INTEGER)
 TEST(SHIFT_EPI32, _mm_srai_epi32, INTEGER)
+TEST(BINARY, _mm_sll_epi16, INTEGER)
 //gudh
 TEST(SHIFT_EPI32, _mm_srai_epi16, INTEGER)
+//TEST(SHIFT_EPI32, _mm_srli_epi32, INTEGER)
 
 TEST(SHUFFLE_PS, _mm_shuffle_ps, FLOAT)
 TEST(UNARY, _mm_cvtepi32_ps, INT2FLOAT)
@@ -695,7 +696,7 @@ int main()
 //	BINARY_RUN(_mm_cmple_ps, t26);
 //
 //	NULLARY_RUN(_mm_setzero_si128, t27);
-	SHUFFLE_EPI_RUN(_mm_shuffle_epi32, t28);
+//	SHUFFLE_EPI_RUN(_mm_shuffle_epi32, t28);
 //	BINARY_RUN(_mm_packs_epi32, t29);
 //	BINARY_RUN(_mm_unpackhi_epi8, t30);
 //	BINARY_RUN(_mm_unpacklo_epi8, t31);
@@ -704,8 +705,10 @@ int main()
 //	BINARY_RUN(_mm_unpacklo_epi16, t34);
 //	BINARY_RUN(_mm_add_epi32, t35);
 //	SHIFT_EPI32_RUN(_mm_srai_epi32, t36);
+	BINARY_RUN(_mm_sll_epi16, t36);
 //	SHIFT_EPI32_RUN(_mm_srai_epi16, t36);
-	SHUFFLE_PS_RUN(_mm_shuffle_ps, t38);
+//	SHIFT_EPI32_RUN(_mm_srli_epi32, t36);
+//	SHUFFLE_PS_RUN(_mm_shuffle_ps, t38);
 //	UNARY_RUN(_mm_cvtepi32_ps, t37);
 //	UNARY_RUN(_mm_cvttps_epi32, t37);
 //	UNARY_RUN(_mm_rcp_ps, t37);

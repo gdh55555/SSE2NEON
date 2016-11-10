@@ -1,17 +1,17 @@
 // =====================================================================================
-// 
+//
 //       Filename:  sse2neon.h
-// 
-//    Description:  
-// 
+//
+//    Description:
+//
 //        Version:  1.0
 //        Created:  2016年10月14日 21时58分08秒
 //       Revision:  none
 //       Compiler:  g++
-// 
+//
 //         Author:  Su Junjie (USTC), jjsu@email.ustc.edu.cn
-//        Company:  
-// 
+//        Company:
+//
 // =====================================================================================
 
 #ifndef SSE2NEON_H
@@ -21,9 +21,9 @@
 #define GCC 1
 
 #if GCC
-#define INLINE					inline __attribute__((always_inline))
+#define INLINE		inline __attribute__((always_inline))
 #else
-#define INLINE					inline
+#define INLINE		inline
 #endif
 
 #include <arm_neon.h>
@@ -41,7 +41,7 @@
 #define _MM_SHUFFLE(fp3,fp2,fp1,fp0) (((fp3) << 6) | ((fp2) << 4) | \
         ((fp1) << 2) | ((fp0)))
 
-
+typedef float32x2_t __m64;
 typedef float32x4_t __m128;
 typedef int32x4_t __m128i;
 
@@ -63,6 +63,9 @@ INLINE __m128i _mm_max_epi16 (__m128i a, __m128i b)
     return (__m128i)vmaxq_s16((int16x8_t) a, (int16x8_t) b);
 }
 
+INLINE __m128i _mm_max_epi32(__m128i a, __m128i b){
+    return vmaxq_s32(a,b);
+}
 /* todo: when the input data contain the NaN. => different behave
    BUT, in actual use, NaN ?
    Need MORE tests?
@@ -82,10 +85,14 @@ INLINE __m128i _mm_min_epi16(__m128i a, __m128i b)
     return (__m128i)vminq_s16((int16x8_t)a, (int16x8_t)b);
 }
 
+INLINE __m128i _mm__min_epi32(__m128i a, __m128i b){
+    return (__m128i)vminq_s32(a,b);
+}
+
 /* todo: when the input data contain the NaN. => different behave
    BUT, in actual use, NaN ?
    Need MORE tests?
-   */
+*/
 INLINE __m128 _mm_min_ps(__m128 a, __m128 b)
 {
     return vminq_f32(a, b);
@@ -178,6 +185,7 @@ INLINE __m128 _mm_sub_ps(__m128 a, __m128 b)
 {
     return vsubq_f32(a, b);
 }
+
 /***************************************************************************
  *                Multiply
  ***************************************************************************/
@@ -205,7 +213,7 @@ INLINE __m128i _mm_mullo_epi16(__m128i a, __m128i b)
 }
 
 //precision problem, test case has some error, may need accuracy
-// Computes the approximations of reciprocals of the four single-precision, floating-point values of a. 
+// Computes the approximations of reciprocals of the four single-precision, floating-point values of a.
 INLINE __m128 recipq_newton(__m128 in, int n)
 {
     __m128 recip = vrecpeq_f32(in);
@@ -232,10 +240,14 @@ INLINE __m128 _mm_rcp_ps(__m128 in)
 // Computes the approximations of square roots of the four single-precision, floating-point values of a.
 INLINE __m128 _mm_sqrt_ps(__m128 in)
 {
+#ifdef HAVE_AARCH64
+    return vsqrtq_f32(in);
+#else
     __m128 recipsq = vrsqrteq_f32(in);
     __m128 sq = vrecpeq_f32(recipsq);
     // ??? use step versions of both sqrt and recip for better accuracy?
     return sq;
+#endif
 }
 
 
@@ -256,7 +268,7 @@ INLINE __m128 _mm_mul_ps(__m128 a, __m128 b)
  *                logic
  ***************************************************************************/
 
-/* Computes the bitwise XOR of the 128-bit value in a and the 128-bit value in b. 
+/* Computes the bitwise XOR of the 128-bit value in a and the 128-bit value in b.
  * r := a ^ b
  * */
 INLINE __m128i _mm_xor_si128(__m128i a, __m128i b)
@@ -283,7 +295,7 @@ INLINE __m128 _mm_xor_ps(__m128 a, __m128 b)
     return (__m128)veorq_s32((__m128i)a, (__m128i)b);
 }
 
-/* Computes the bitwise AND of the 128-bit value in b and the bitwise NOT of the 128-bit value in a. 
+/* Computes the bitwise AND of the 128-bit value in b and the bitwise NOT of the 128-bit value in a.
  * r := (~a) & b
  * */
 INLINE __m128i _mm_andnot_si128(__m128i a, __m128i b)
@@ -317,7 +329,7 @@ INLINE __m128 _mm_and_ps(__m128 a, __m128 b)
     return (__m128)vandq_s32((__m128i)a, (__m128i)b);
 }
 
-/* Compares the 16 signed 8-bit integers in a and the 16 signed 8-bit integers in b for greater than. 
+/* Compares the 16 signed 8-bit integers in a and the 16 signed 8-bit integers in b for greater than.
  * r0 := (a0 > b0) ? 0xff : 0x0
  * r1 := (a1 > b1) ? 0xff : 0x0
  * ...
@@ -345,13 +357,13 @@ INLINE __m128i _mm_cmplt_epi32(__m128i a, __m128i b)
     return (__m128i)vcltq_s32(a, b);
 }
 
-// Compares the 4 signed 32-bit integers in a and the 4 signed 32-bit integers in b for greater than. 
+// Compares the 4 signed 32-bit integers in a and the 4 signed 32-bit integers in b for greater than.
 INLINE __m128i _mm_cmpgt_epi32(__m128i a, __m128i b)
 {
     return (__m128i)vcgtq_s32(a, b);
 }
 
-// Compares the four 32-bit floats in a and b to check if any values are NaN. Ordered compare between each value returns true for "orderable" and false for "not orderable" (NaN). 
+// Compares the four 32-bit floats in a and b to check if any values are NaN. Ordered compare between each value returns true for "orderable" and false for "not orderable" (NaN).
 INLINE __m128 _mm_cmpord_ps(__m128 a, __m128 b )
 {
     // Note: NEON does not have ordered compare builtin
@@ -370,7 +382,7 @@ INLINE __m128 _mm_cmpgt_ps(__m128 a, __m128 b)
     return (__m128)vcgtq_f32(a, b);
 }
 
-// Compares for greater than or equal. 
+// Compares for greater than or equal.
 INLINE __m128 _mm_cmpge_ps(__m128 a, __m128 b)
 {
     return (__m128)vcgeq_f32(a, b);
@@ -388,13 +400,13 @@ INLINE __m128 _mm_cmple_ps(__m128 a, __m128 b)
     return (__m128)vcleq_f32(a, b);
 }
 
-// Compares for equality. 
+// Compares for equality.
 INLINE __m128i _mm_cmpeq_epi16(__m128i a, __m128i b)
 {
     return (__m128i)vceqq_s32(a, b);
 }
 
-// Compares for inequality. 
+// Compares for inequality.
 INLINE __m128 _mm_cmpneq_ps(__m128 a, __m128 b)
 {
     return (__m128)vmvnq_s32((__m128i)vceqq_f32(a, b));
@@ -414,7 +426,7 @@ INLINE __m128i _mm_load_si128(const __m128i *p)
 {
     return vld1q_s32((int32_t *)p);
 }
-INLINE void _mm_store_si128(__m128i *p, __m128i a ) 
+INLINE void _mm_store_si128(__m128i *p, __m128i a )
 {
     vst1q_s32((int32_t*) p,a);
 }
@@ -450,6 +462,16 @@ INLINE void _mm_storel_epi64(__m128i* a, __m128i b)
     vst1_s32( (int32_t *) a, vget_low_s32((int32x4_t)b));
 }
 
+INLINE __m128 _mm_loadl_pi(__m128 a, __64 const* p){
+    return vcombine_f32(vldl_f32((float32_t const*)p), vget_high_f32(a));
+}
+
+INLINE void _mm_store1_pi(__m64* p, __m128 a){
+    vstl_f32((float32_t *)p, vget_low_f32((float32x4_t)a));
+}
+
+
+
 INLINE __m128 _mm_load_ss(const float * p)
 {
     /* Loads an single-precision, floating-point value into the low word and clears the upper three words. */
@@ -463,14 +485,14 @@ INLINE void _mm_store_ss(float *p, __m128 a)
     vst1q_lane_f32(p, a, 0);
 }
 
-// Loads four single-precision, floating-point values. 
+// Loads four single-precision, floating-point values.
 INLINE __m128 _mm_load1_ps(const float * p)
 {
     return vld1q_dup_f32(p);
 }
 
 /***************************************************************************
- *                SET 
+ *                SET
  ***************************************************************************/
 /* Moves 32-bit integer a to the least significant 32 bits of an __m128 object, zero extending the upper bits.
  * r0 := a
@@ -488,7 +510,7 @@ INLINE __m128i _mm_cvttps_epi32(__m128 a)
     return vcvtq_s32_f32(a);
 }
 
-// Converts the four single-precision, floating-point values of a to signed 32-bit integer values. 
+// Converts the four single-precision, floating-point values of a to signed 32-bit integer values.
 INLINE __m128i _mm_cvtps_epi32(__m128 a)
 {
 #if __aarch64__
@@ -532,7 +554,7 @@ INLINE __m128i _mm_set1_epi32(int _i)
 }
 
 /* Sets the four single-precision, floating-point values to w
- * r0 := r1 := r2 := r3 := w 
+ * r0 := r1 := r2 := r3 := w
  * */
 INLINE __m128 _mm_set1_ps(float w)
 {
@@ -610,7 +632,7 @@ INLINE __m128 _mm_shuffle_ps_default(__m128 a, __m128 b)
 #define _mm_shuffle_ps(a,b,i) _mm_shuffle_ps_default<i>(a,b)
 
 /***************************************************************************
- *                GET 
+ *                GET
  ***************************************************************************/
 INLINE int _mm_cvtsi128_si32(__m128i a)
 {
@@ -627,14 +649,14 @@ INLINE __m128i _mm_setzero_si128()
 }
 
 /* Clears the four single-precision, floating-point values.
- * r0 := r1 := r2 := r3 := 0.0 
+ * r0 := r1 := r2 := r3 := 0.0
  * */
 INLINE __m128 _mm_setzero_ps(void)
 {
     return vdupq_n_f32(0);
 }
 /***************************************************************************
- *                convert 
+ *                convert
  ***************************************************************************/
 
 /* Packs the 8 signed 32-bit integers from a and b into signed 16-bit integers and saturates.
@@ -714,6 +736,21 @@ INLINE __m128i _mm_unpacklo_epi16(__m128i a, __m128i b)
     return (__m128i)vcombine_s16(result.val[0], result.val[1]);
 }
 
+INLINE __m128i _mm_unpacklo_epi32(__m128i a, __m128i b)
+{
+    int32x2_t a_l = vget_low_s32((int32x4_t)a);
+    int32x2_t b_l = vget_low_s32((int32x4_t)b);
+    int32x2x2_t r = vzip_s32(a_l, b_l);
+    return (__m128i)vcombine_s32(r.val[0],r.val[1]);
+}
+
+INLINE __m128i _mm_unpacklo_epi64(__m128i a, __m128i b)
+{
+    int64x1_t a_l = vget_low_s64((int64x2_t)a);
+    int64x1_t b_l = vget_low_s64((int64x2_t)b);
+    return (__m128i)vcombine_s64(a_l, b_l);
+}
+
 INLINE __m128i _mm_unpackhi_epi32(__m128i a, __m128i b)
 {
     int32x2_t a1 = vget_high_s32(a);
@@ -734,14 +771,16 @@ INLINE __m128 _mm_cvtepi32_ps(__m128i a)
  * r2 := (int) a2
  * r3 := (int) a3
  * */
-/*
-   INLINE __m128i _mm_cvtps_epi32(__m128 a)
-   {
-//todo:precision
-//NaN -0
-return vcvtq_s32_f32(a);
+INLINE __m128i _mm_cvtps_epi32(__m128 a)
+{
+#ifdef HAVE_AARCH64
+    return vcvtnq_s32_f32(a);
+#else
+    //todo:precision
+    //NaN -0
+    return vcvtq_s32_f32(a);
+#endif
 }
-*/
 
 
 /* Packs the 16 signed 16-bit integers from a and b into 8-bit unsigned integers and saturates.
@@ -760,7 +799,7 @@ INLINE __m128i _mm_packus_epi16(const __m128i a, const __m128i b)
     return (__m128i)vcombine_u8(vqmovun_s16((int16x8_t)a), vqmovun_s16((int16x8_t)b));
 }
 /***************************************************************************
- *                shift 
+ *                shift
  ***************************************************************************/
 /* Shifts the 4 signed 32-bit integers in a right by count bits while shifting in the sign bit.
  * r0 := a0 >> count
@@ -784,7 +823,7 @@ INLINE __m128i _mm_srai_epi16 (__m128i a, int count)
 }
 
 /*
-// Shifts the 8 signed or unsigned 16-bit integers in a right by count bits while shifting in zeros. 
+// Shifts the 8 signed or unsigned 16-bit integers in a right by count bits while shifting in zeros.
 INLINE __m128i _mm_srl_epi16(__m128i a, __m128i count){
     int16x8_t b = vqnegq_s16((int16x8_t)count);
     return (__m128i)vshlq_u16((uint16x8_t)a, b);
@@ -795,19 +834,24 @@ INLINE __m128i _mm_sll_epi16(__m128i a, __m128i count){
 }
 */
 
-// Shifts the 4 signed or unsigned 32-bit integers in a left by count bits while shifting in zeros. 
+// Shifts the 4 signed or unsigned 32-bit integers in a left by count bits while shifting in zeros.
 #define _mm_slli_epi32(a, imm) (__m128i)vshlq_n_s32(a,imm)
 
+INLINE __m128i _mm_slli_epi16(__m128i a, int count)
+{
+    return (__m128i)vshlq_s16((int16x8_t)a, vdupq_n_s16(count));
+}
 
-//Shifts the 4 signed or unsigned 32-bit integers in a right by count bits while shifting in zeros. 
+
+//Shifts the 4 signed or unsigned 32-bit integers in a right by count bits while shifting in zeros.
 template <int imm>
-INLINE __m128i _mm_srli_epi32(__m128i a){ 
+INLINE __m128i _mm_srli_epi32(__m128i a){
     return (__m128i)vshrq_n_u32((uint32x4_t)a, imm);
 }
 #define _mm_srli_epi32( a, imm ) _mm_srli_epi32<imm>(a)
 
 template<int imm>
-INLINE __m128i _mm_srli_epi16(__m128i a){ 
+INLINE __m128i _mm_srli_epi16(__m128i a){
     return (__m128i)vshrq_n_u16((uint16x8_t)a, imm);
 }
 #define _mm_srli_epi16(a, imm) _mm_srli_epi16<imm>(a)
@@ -818,8 +862,18 @@ INLINE __m128i _mm_srli_epi16(__m128i a){
 // Shifts the 128 - bit value in a right by imm bytes while shifting in zeros.imm must be an immediate.
 #define _mm_srli_si128( a, imm ) (__m128i)vextq_s8((int8x16_t)a, vdupq_n_s8(0), (imm))
 
-// Shifts the 128-bit value in a left by imm bytes while shifting in zeros. imm must be an immediate. 
+// Shifts the 128-bit value in a left by imm bytes while shifting in zeros. imm must be an immediate.
 #define _mm_slli_si128( a, imm ) (__m128i)vextq_s8(vdupq_n_s8(0), (int8x16_t)a, 16 - (imm))
+
+INLINE __m128 _mm_movelh_ps( __m128 a, __m128 b  )
+{
+    return vcombine_f32(vget_low_f32(a),vget_low_f32(b));
+}
+
+INLINE __m128 _mm_movehl_ps( __m128 a, __m128 b  )
+{
+    return vcombine_f32(vget_high_f32(b),vget_high_f32(a));
+}
 
 INLINE int _mm_movemask_epi8(__m128i _a)
 {

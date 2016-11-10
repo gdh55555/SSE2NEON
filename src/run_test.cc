@@ -1,17 +1,17 @@
 // =====================================================================================
-// 
+//
 //       Filename:  run_test.cc
-// 
-//    Description:  
-// 
+//
+//    Description:
+//
 //        Version:  1.0
 //        Created:  2016年10月18日 20时25分24秒
 //       Revision:  none
 //       Compiler:  g++
-// 
+//
 //         Author:  Su Junjie (USTC), jjsu@email.ustc.edu.cn
-//        Company:  
-// 
+//        Company:
+//
 // =====================================================================================
 
 #include <iostream>
@@ -21,13 +21,13 @@
 #include <string>
 #include <cstring>
 
-#ifdef __GNUC__                                               
-#  define CV_DECL_ALIGNED(x) __attribute__ ((aligned (x)))    
-#elif defined _MSC_VER                                        
-#  define CV_DECL_ALIGNED(x) __declspec(align(x))             
-#else                                                         
-#  define CV_DECL_ALIGNED(x)                                  
-#endif                                                        
+#ifdef __GNUC__
+#  define CV_DECL_ALIGNED(x) __attribute__ ((aligned (x)))
+#elif defined _MSC_VER
+#  define CV_DECL_ALIGNED(x) __declspec(align(x))
+#else
+#  define CV_DECL_ALIGNED(x)
+#endif
 
 #ifdef ARM
 #define DESKTOP 0
@@ -486,8 +486,8 @@ void init()									\
 #define SET_INIT NULLARY_INIT
 #define GET_INIT UNARY_INIT
 #define SHIFT_EPI32_INIT UNARY_INIT
-#define SHUFFLE_EPI_INIT UNARY_INIT 
-#define SHUFFLE_PS_INIT BINARY_INIT 
+#define SHUFFLE_EPI_INIT UNARY_INIT
+#define SHUFFLE_PS_INIT BINARY_INIT
 
 #define TEST_DEFINE_INTEGER(PREFIX,FUNC)								\
 	TEST_DEFINE(PREFIX,FUNC,uint8_t ,INTEGER,INTEGER,__m128i,__m128i);	\
@@ -557,7 +557,7 @@ private:																\
 	TEST_DEFINE_ ## TYPE(PREFIX , FUNC)									\
 																		\
 																		\
-};		
+};
 
 
 #define RUN(PREFIX,FUNC,VAL)   PREFIX ## Test ## FUNC VAL;
@@ -647,7 +647,7 @@ TEST(UNARY, _mm_sqrt_ps, FLOAT)
 
 TEST(BINARY, _mm_mul_ps, FLOAT)
 TEST(BINARY, _mm_add_ps, FLOAT)
-//TEST(UNARY, _mm_cvtps_epi32, FLOAT2INT)
+TEST(UNARY, _mm_cvtps_epi32, FLOAT2INT)
 TEST(BINARY, _mm_packus_epi16, INTEGER)
 TEST(BINARY, _mm_sub_ps, FLOAT)
 TEST(BINARY, _mm_sub_epi32, INTEGER)

@@ -20,7 +20,7 @@ echo "Step.2 generate and push the input file"
 
 cd $BIN_DIR
 $BIN_DIR/gen_input
-adb push input /data/
+adb -s ATC push input /data/
 
 
 echo "Step.3 clean result files and push test_neon"
@@ -28,11 +28,11 @@ echo "Step.3 clean result files and push test_neon"
 cd $BIN_DIR
 rm -rf results/*
 mkdir -p results
-adb push test_neon /data
+adb -s ATC push test_neon /data
 
 
 echo "Step.4 ***running on ARM****"
-adb shell "/data/test_neon " > results/NEON.log
+adb -s ATC shell "/data/test_neon " > results/NEON.log
 
 if [ $? -ne 0 ]
 then

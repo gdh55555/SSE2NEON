@@ -585,6 +585,7 @@ TEST(BINARY, _mm_adds_epu16, INTEGER)
 
 TEST(SET, _mm_cvtsi32_si128, INTEGER)
 TEST(GET, _mm_cvtsi128_si32, INTEGER)
+TEST(GET, _mm_movemask_epi8, INTEGER)
 TEST(LOAD, _mm_loadl_epi64, INTEGER)
 TEST(STORE, _mm_storel_epi64, INTEGER)
 TEST(LOAD, _mm_load_ss, FLOAT)
@@ -632,7 +633,7 @@ TEST(BINARY, _mm_unpacklo_epi16, INTEGER)
 TEST(BINARY, _mm_add_epi32, INTEGER)
 TEST(BINARY, _mm_unpackhi_epi16, INTEGER)
 TEST(SHIFT_EPI32, _mm_srai_epi32, INTEGER)
-TEST(BINARY, _mm_sll_epi16, INTEGER)
+//TEST(BINARY, _mm_sll_epi16, INTEGER)
 //gudh
 TEST(SHIFT_EPI32, _mm_srai_epi16, INTEGER)
 //TEST(SHIFT_EPI32, _mm_srli_epi32, INTEGER)
@@ -664,6 +665,7 @@ int main()
 //
 //	SET_RUN(_mm_cvtsi32_si128, t9);
 //	GET_RUN(_mm_cvtsi128_si32, t10);
+//	GET_RUN(_mm_movemask_epi8, t10);
 //	LOAD_RUN(_mm_loadl_epi64, t11);
 //	STORE_RUN(_mm_storel_epi64, t12);
 //	LOAD_RUN(_mm_load_ss, t13);
@@ -705,7 +707,7 @@ int main()
 //	BINARY_RUN(_mm_unpacklo_epi16, t34);
 //	BINARY_RUN(_mm_add_epi32, t35);
 //	SHIFT_EPI32_RUN(_mm_srai_epi32, t36);
-	BINARY_RUN(_mm_sll_epi16, t36);
+//	BINARY_RUN(_mm_sll_epi16, t36);
 //	SHIFT_EPI32_RUN(_mm_srai_epi16, t36);
 //	SHIFT_EPI32_RUN(_mm_srli_epi32, t36);
 //	SHUFFLE_PS_RUN(_mm_shuffle_ps, t38);
